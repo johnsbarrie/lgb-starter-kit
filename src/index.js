@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-import App from './components/App'
+import App from './views/app'
 
 require(`./assets/styles/${process.env.TARGET}.scss`)
 require(`./assets/styles/${process.env.TARGET}.css`)

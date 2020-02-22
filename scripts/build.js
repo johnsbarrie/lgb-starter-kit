@@ -1,5 +1,4 @@
 import webpack from 'webpack'
-
 const merge = require('webpack-merge')
 const prod = require('./config/webpack.prod.js')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -36,8 +35,8 @@ builds.map(TARGET => {
 
     console.log(
       stats.toString({
-        chunks: false, // Makes the build much quieter
-        colors: true, // Shows colors in the console
+        chunks: false,
+        colors: true,
       })
     )
   })

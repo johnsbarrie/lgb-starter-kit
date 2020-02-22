@@ -1,6 +1,6 @@
-# Llloyds Banking Group CWA Starterkit
+# CWA Skeleton Application
 
-A simple and complete Webpack 4 React Boilerplate.
+A basic build for CWAs
 
 - Ready to start React App (CWA)
 - Integrate configuration and builds for the Lloyds Constellation package
@@ -11,13 +11,7 @@ A simple and complete Webpack 4 React Boilerplate.
 
 ## Motivation
 
-The purpose of starter kit is help to create new apps and projects for CWA in Lloyds Banking Group
-
-## Getting Started
-
-```CLI
-npx lgb-starterkit my-app
-```
+The purpose of starter kit is help to create new apps and projects for CWA
 
 ### Prerequisites
 
@@ -61,11 +55,12 @@ yarn test:coverage
 
 ### Production build
 
-You can generate an optimized distribution bundle. To do this run the command:
+You can generate an optimized distribution bundle by running this command:
 
 ```CLI
 yarn build
 ```
+The .env contains information that can be edited to includes or remove target such as bos.
 
 It´s possible to check the size and content of your bundled file. To do this run the command:
 
@@ -73,27 +68,12 @@ It´s possible to check the size and content of your bundled file. To do this ru
 yarn analyze
 ```
 
-## Built With
-
-- [webpack](https://webpack.js.org/) - Static module bundler
-- [React](https://babeljs.io/) - JavaScript library for building user interfaces
-- [Babel](https://babeljs.io/) - EcmaScript Transpiler
-- [Yarn](https://yarnpkg.com) - Dependency Management
-- [Jest](https://jestjs.io/) - JavaScript Testing
-- [Enzyme](https://airbnb.io/enzyme/docs/api/) - Component tests for React
-
 ## Contributing
 
 Suggestions or pull requests are welcome.
 
 For major changes, please open an issue first to discuss what you would like to change.
 
-## Versions
-
-- v1.0 - A complete webpack 4 configuration
-- v1.1 - Production build optimization
-
-Click [here](https://github.com/FerJSsilva/webpack-4-react-boilerplate/tags) to see or download the project in a specific tag.
 
 ## License
 
