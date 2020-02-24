@@ -1,13 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { loadItem } from '../../actions'
+import { Link } from 'react-router-dom'
+import { PropTypes } from 'prop-types'
 
-const button = onClick => {
+const button = path => {
   return (
-    onClick && (
-      <button type="button" onClick={onClick}>
-        Go to Users
-      </button>
+    path && (
+      <Link to={path}>
+        <button type="button">Go to Users</button>
+      </Link>
     )
   )
 }
@@ -19,9 +21,15 @@ const Template = props => {
         <h1 className="App-title">{props.title}</h1>
       </header>
       <div>{props.text}</div>
-      {button(props.onClick)}
+      {button(props.navigateTo)}
     </div>
   )
+}
+
+Template.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+  path: PropTypes.string,
 }
 
 export default connect(null, { loadItem })(Template)

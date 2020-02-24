@@ -8,13 +8,13 @@ const pageId = 'home'
 const HomeBinding = props => {
   let history = useHistory()
   const onClick = () => {
-    history.push('/users')
+    history.push()
   }
 
   useEffect(() => {
     props.loadItem(pageId)
   })
-  return <Template title={props.title} text={props.text} onClick={onClick} />
+  return <Template title={props.title} text={props.text} navigateTo="/users" />
 }
 
 const mapStateToProps = state => {

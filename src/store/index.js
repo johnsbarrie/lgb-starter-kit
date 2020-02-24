@@ -5,18 +5,15 @@ import rootSaga from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const configureStore = () => {
-  const store = createStore(
-    reducers,
-    compose(
-      applyMiddleware(sagaMiddleware),
-      window.__REDUX_DEVTOOLS_EXTENSION__ &&
-        window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
+const store = createStore(
+  reducers,
+  compose(
+    applyMiddleware(sagaMiddleware),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
-  sagaMiddleware.run(rootSaga)
+)
+sagaMiddleware.run(rootSaga)
 
-  return store
-}
+const action = (type, payload) => store.dispatch({ type, payload })
 
-export default configureStore
+export { action, store }
